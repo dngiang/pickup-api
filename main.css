@@ -1,0 +1,174 @@
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-img::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://images.pexels.com/photos/363905/pexels-photo-363905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 1000ms;
+}
+
+.bg-img:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.bg-img:hover .content {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+form{
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  border-radius: 5px;
+}
+
+.js-query {
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  /* padding: 10px 15px; */
+}
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -145px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  transition: all 1000ms;
+}
+
+.content .logo {
+  height: 180px;
+  width: 180px;
+}
+
+.content .title {
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+.content .text {
+  line-height: 1.7;
+  margin-top: 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.grid-2 {
+  color:grey;
+  text-align: center;
+ 
+}
+
+.results{
+  size: 10px;
+}
+
+.bold{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/*Goal: have authors in one line; note-to-self: INLINE/INLINE-BLOCK does not work*/
+.authors-display{
+  display: inline-block;
+}
+
+/*Goal: center the data*/
+.lyrics-container{
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.center .copyrights {
+  background: #333;
+  color: #f4f4f4;
+}
+
+footer {
+  padding: 2.2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 560px) {
+  .bg-img::after {
+    height: 50vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content .logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .additional div {
+    border-bottom: #333 dashed 1px;
+    padding: 1.2rem 1rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
+
+  .content {
+    top: 0;
+  }
+}

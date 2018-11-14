@@ -29,7 +29,7 @@ body {
   -webkit-filter: blur(2px);
 }
 
-form{
+form {
   text-align: center;
 }
 
@@ -43,7 +43,6 @@ button {
   margin-top: 15px;
   border-radius: 5px;
   border: none;
-  /* padding: 10px 15px; */
 }
 .content {
   position: absolute;
@@ -86,25 +85,22 @@ button {
 .grid-2 {
   color:grey;
   text-align: center;
- 
 }
 
-.results{
+.results {
   size: 10px;
 }
 
-.bold{
+.bold {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-/*Goal: have authors in one line; note-to-self: INLINE/INLINE-BLOCK does not work*/
-.authors-display{
+.authors-display {
   display: inline-block;
 }
 
-/*Goal: center the data*/
-.lyrics-container{
+.lyrics-container {
   text-align: center;
 }
 

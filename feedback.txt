@@ -1,0 +1,7 @@
+4/4 users love the idea of the application.
+1/4 user find the landing page to be hard to read. She couldn't see the results being loaded.
+2/4 users said the focus in and out of the landing page to be impressive.
+2/4 users said the focus in and out of the landing page caused them headache.
+4/4 users said they would visit the webpage again.
+
+Overall, users enjoyed the functionality of the application. However, the design might need a little bit of work.

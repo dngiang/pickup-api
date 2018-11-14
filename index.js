@@ -1,16 +1,13 @@
 // 1) User inputs a song title
-// 2) User receives the lyrics sheet with chords
+// 2) User receives the lyrics sheet with chords got instrumental playing
 // 3) Repeats
-
-// Guitarparty API Key: eeba69898254c9808d08202bc78e91b944bef5d0
-
-// Other requirements/In-progress: ARIA Live.
 
 //=========================================================================================================================================
 
 
 const GParty_SEARCH_URL = 'https://api.guitarparty.com/v2/songs/';
 
+//Receives data from API
 function getDataFromApi (query, displayGPartySearchData) {
     const url ='https://api.guitarparty.com/v2/songs/?query=' + query;
 
@@ -22,7 +19,7 @@ function getDataFromApi (query, displayGPartySearchData) {
     });
 }
 
-
+//Shows data received
 function displayGPartySearchData(data) {
     if(data.objects.length === 0) {
         displayPopup();
@@ -46,6 +43,7 @@ function displayGPartySearchData(data) {
     }
 }
 
+//Invalid search
 function displayPopup() { 
     $('.feedback-section').show();
     $('.popup-frame #popup-text').text('Sorry, we currently do not have the song you are looking for');
@@ -53,11 +51,13 @@ function displayPopup() {
     $('.js-search-results').html("");
 }
 
+//Valid search
 function hidePopup() { 
     $('.feedback-section').hide();
     $('.popup-frame').hide();
 }
 
+//Initiate search function
 function init() {
     $('.feedback-section').hide();
     $('.js-search-form').submit(event => {
